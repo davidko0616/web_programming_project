@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Midterm Practice</title>
+        <link href="Style.css" rel="stylesheet" />
+        <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
+    <body>
+        <div class="top_content">
+            <ul class="top_information">
+              <li>phone number: 010-1234-5678</li>
+              <li>email: chunglaos3@gmail.com</li>
+            </ul>
+          </div>
+        <h1>
+            <nav class="navbar" style="text-align: center;">
+                <div class="logo">
+                    <img src="C:\Users\chung\Desktop\2025-1학기\웹프로그래밍\Untitled presentation.jpg" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180", height="80">
+                </div> 
+                <ul class="menu-bar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">인원</a></li>
+                </ul>
+            </nav>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="C:\Users\chung\Desktop\2025-1학기\웹프로그래밍\group_pic.jpg" /></div>
+                <div class="swiper-slide"><img src="C:\Users\chung\Desktop\2025-1학기\웹프로그래밍\snack.jpg" /></div>
+                <div class="swiper-slide"><img src="C:\Users\chung\Desktop\2025-1학기\웹프로그래밍\retreat.jpg" /></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="intro_af_pic">
+            <h2>Bonding & Sharing</h2>
+            <p>이 모든 것 위에 사랑을 더하라 이는 온전하게 매는 띠니라</p>
+            <p>-골로세서 3:14-</p>
+        </div>
+        <script src="Home page.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+        const swiper = new Swiper(".mySwiper", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
+        </script>
+    </body>
+</html>
+
