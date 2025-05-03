@@ -54,10 +54,7 @@ body {
 }
 
 .log-in{
-    position: absolute;
-    top: 220px;
-    right: 70px;
-
+    position: static;
 }
 
 label {
@@ -101,4 +98,54 @@ label {
 
   .intro_af_pic p{
     font-size: 25px;
+  }
+
+  .into-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  .into-mid {
+    display: flex;
+    align-items: center;
+    background-color: #2f4266;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 1000px;
+  }
+  
+  .into-mid-img img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .into-mid-text {
+    margin-left: 40px;
+    max-width: 600px;
+  }
+  
+  .into-mid-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .into-mid-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+  
+  .apply-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
   }
