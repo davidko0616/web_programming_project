@@ -63,9 +63,6 @@ label {
     font-weight: bold;
 }
 
-.form-group {
-    margin-bottom: 15px;  /* Adds space between form groups */
-}
 
 .swiper {
     width: 100vw;

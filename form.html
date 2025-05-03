@@ -2,34 +2,50 @@
 <html>
     <head>
         <title>YMK Application Form</title>
-        <link href="Style.css" rel="stylesheet" />
+        <link href="form.css" rel="stylesheet" />
     </head>
     <body>
-        <form id="ymk-form" onsubmit="submitForm(event)">
-            <div class="log-in">
+
+        <form id="ymk-form" onsubmit="submitForm(event)" >
+            <img src="YMK 로고.png" alt="YMK Logo" class="form-header-image" />
+            <div class="intro">
+                <p>💙새내기 YMK, 환영해요💙</p>
+                <br>
+                <br>
+                새내기 여러분, 연세대학교에 입학하신 것을 환영해요!!! 🦅🦅
+                저희 YMK(Yonsei Missionary Kids)의 가족이 되기 위해 여기까지 와 주셔서 너무 감사해요! YMK는 연세대학교에 있는 선교사 자녀들이 함께하는 공동체입니다.
+                <br>
+                <br>
+                여러 행사들과 일정들을 통해 여러분의 학교생활을 도와드리고 함께 할 예정이라, 연락처가 필요해요!
+                길지 않으니 아래 신청서를 작성해주세요 💙
+                <br>
+                <br>
+                ❗YMK는 연세대학교 기독학생 연합회(연기연) 소속이므로, 신천지나 하나님의 교회 등의 이단 소속 분들께서는 돌아가주시면 감사하겠습니다.
+            </div>
+            <div class="form-group">
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    <label for="name">이름</label>
+                    <input type="text" name="name" id="name" placeholder="단답형 텍스트" required>
                 </div>
         
-                <div class="form_group">
-                    <label for="sex">Sex</label>
+                <div class="form-group">
+                    <label for="sex">성별</label>
                     <label><input type="radio" name="sex" value="Male" checked="checked" required>Male</label>
                     <label><input type="radio" name="sex" value="Female" required>Female</label>
                 </div>
         
                 <div class="form-group">
-                    <label for="department">Department</label>
-                    <input type="text" name="department" id="department" placeholder="Enter your department" required>
+                    <label for="department">소속 단과대 및 학과 (예. 사회과학대학/정치외교학과)</label>
+                    <input type="text" name="department" id="department" placeholder="단답형 텍스트" required>
                 </div>
         
                 <div class="form-group">
-                    <label for="studentid">Student ID</label>
-                    <input type="text" name="studentid" id="studentid" placeholder="Enter your student-id" required>
+                    <label for="studentid">전체학번 (예. 2022190***) (오직 명부 작성에만 사용됩니다! 학번을 아직 받지 못하셨다면 작성 안하셔도 됩니다)</label>
+                    <input type="text" name="studentid" id="studentid" placeholder="단답형 텍스트" required>
                 </div>
         
                 <div class="form-group">
-                    <label for="birthday">Date of birth</label>
+                    <label for="birthday">생년월일</label>
                     <input type="text" name="Year" id="Year" placeholder="Year" pattern="\d{4}" title="Please enter a 4-digit year" required>
                     <select name="Month" id="Month" required>
                         <option value="" disabled selected>Month</option>
@@ -50,20 +66,53 @@
                 </div>
         
                 <div class="form-group">
-                    <label for="phonenumber">Phone Number</label>
-                    <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" required>
+                    <label for="phonenumber">전화번호 (예. 010-1234-5678)</label>
+                    <input type="text" name="phonenumber" id="phonenumber" placeholder="단답형 텍스트" required>
                 </div>
         
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Enter your email address" required>
+                    <label for="email">이메일 주소</label>
+                    <input type="text" name="email" id="email" placeholder="단답형 텍스트" required>
                 </div>
         
                 <div class="form-group">
-                    <label for="mission">Mission country</label>
-                    <input type="text" name="mission" id="mission" placeholder="Enter your misson country" required>
-                </div class="submit-button">
-                <input type = "submit"/>
+                    <label for="mission">파송 나라 (거주 국가(들))</label>
+                    <input type="text" name="mission" id="mission" placeholder="단답형 텍스트" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mission_paper">추후 임크 공식행사 (리트릿 등)에 참석하려면 부모님의 선교사 파송 증명서(재직증명서도 괜찮아요!)가 있어야 합니다! (발급 유효기간은 없어요!)</label>
+                    <input type="file" name="mission_paper" id="mission_paper" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emergency_number">비상연락처 (전화번호, 카톡ID 등)</label>
+                    <input type="text" name="emergency_number" placeholder="단답형 텍스트" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="relation">비상연락처 소유자와의 관계</label>
+                    <input type="text" name="relation" id="relation" placeholder="단답형 텍스트" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="private_info">YMK에서 위 개인정보를 명부작성에 사용하는것을 동의합니다.</label>
+                    <input type="radio" name="private_info" id="private_info" value="Yes" required>예
+                </div>
+
+                <div class="form-group">
+                    <label for="private_info2">연세대학교 교목실에서 기독동아리(기도모임 포함) 등록 신청서 접수 및 관리를 위해 다음 개인정보(성명, 성별, 연락처, 이메일, 학과(전공), 학번)를 1년간 보유하는것에 동의합니다.</label>
+                    <input type="radio" name="private_info2" id="private_info2" value="Yes" required>예
+                </div class="form-group">
+
+                <div class="form-group">
+                    <label for="question">궁금한 점이 있다면 대표 황주한 (010-7317-2606) 혹은 새맞단 단장 김희원 (카톡ID: heewonkim7)에게 편하게 연락 주세요!</label>
+                    <input type="text" name="question" placeholder="단답형 텍스트" required>
+                </div>
+
+                <div class="submit-button">
+                    <input type = "submit"/>
+                </div>
             </div>
         </form>
         <div id="success-message" style="display:none; color:green;">
