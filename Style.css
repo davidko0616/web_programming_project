@@ -146,3 +146,19 @@ label {
     font-size: 16px;
     cursor: pointer;
   }
+
+.sns {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right:
+  margin: 0;
+}
+
+.sns li {
+  display: inline;
+}
+
+.sns img {
+  width: 48px;
+  height: auto;
+}
