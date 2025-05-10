@@ -1,44 +1,35 @@
 body {
     font-family: "Noto Sans KR", sans-serif; /* or another web-safe font that handles both well */
   }
-.top_content{
+  .navbar {
     display: flex;
     justify-content: center;
-    background-color: #27548A;
-    color: white;
-}
-.top_information {
-    list-style: none;
-    padding: 20px 40px;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-  }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
     padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 40px;
   }
 
 .logo {
-    flex: 0 0 auto;
-  }
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #AFDDFF;}
   
 .logo img {
-    height: 100px;
-    width: 180px;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
   }
 
-.menu-bar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  .menu-bar {
     display: flex;
     list-style: none;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+    position: static;
+    transform: none;
   }
 
 .menu-bar li a {
@@ -47,22 +38,12 @@ body {
     padding: 10px;
     width: 80px;
     display: inline-block;
-  }
+    border-radius: 10px;
+    }
 
 .menu-bar a:hover{
     color: #F7CFD8;
 }
-
-.log-in{
-    position: static;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
 
 .swiper {
     width: 100vw;
