@@ -5,34 +5,43 @@
         <link href="Style.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Gowun+Batang&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-      <div class="logo">
-        <img src="YMK 로고.png" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180" height="80">
-      </div>
-        <div id="menu"></div>
-        <h1>
-            <nav class="navbar" style="text-align: center;">
-                <ul class="menu-bar">
-                    <li><a href="Home Page.html">Home</a></li>
-                    <li><a href="intro.html">소개</a></li>
-                    <li><a href="#">역사</a></li>
-                    <li><a href="#">인원</a></li>
-                </ul>
-            </nav>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="group_img.jpg" /></div>
-                <div class="swiper-slide"><img src="food_img.jpg" /></div>
-                <div class="swiper-slide"><img src="course_apply.JPG" /></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+      <div class="header">
+        <div class="logo">
+          <img src="YMK 로고.png" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180" height="80">
         </div>
-        <div class="intro_af_pic">
+      
+        <nav class="navbar">
+          <ul class="menu-bar">
+            <li><a href="Home Page.html">Home</a></li>
+            <li><a href="intro.html">소개</a></li>
+            <li><a href="#">역사</a></li>
+            <li><a href="#">인원</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      
+      <div class="swiper-container-wrap">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="group_img.jpg" /></div>
+            <div class="swiper-slide"><img src="food_img.jpg" /></div>
+            <div class="swiper-slide"><img src="course_apply.JPG" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>      
+        <div class="after-intro">
             <h2>Bonding & Sharing</h2>
             <p>이 모든 것 위에 사랑을 더하라 이는 온전하게 매는 띠니라</p>
-            <p>-골로세서 3:14-</p>
+            <p>- 골로세서 3:14 -</p>
         </div>
         <div class="into-wrapper">
             <div class="into-mid">
@@ -41,11 +50,13 @@
               </div>
 
               <div class="into-mid-text">
-                <h2>YMK 지원</h2>
+                <h2>About Us</h2>
+                <p>연세대학교에 입학한 MK들이 대학에 잘 적응할 수 있도록 도와주고, 신앙을 붙들 수 있도록 임쓰며 대학이라는 새로운 시작을 함께 동행하기 위해 설립된 단체.</p>
+                <br>
+                <p>자격:</p>
                 <ul>
-                  <li>지원: 신청서 링크를 통해서 신청</li>
-                  <li>자격: 선교사 자녀, 연세대학교 학생</li>
-                  <li>소개: 연세대학교에 입학한 MK들이 대학에 잘 적응할 수 있도록 도와주고, 신앙을 붙들 수 있도록 임쓰며 대학이라는 새로운 시작을 함께 동행하기 위해 설립된 단체.</li>
+                  <li>연세대학교 재학생</li>
+                  <li>선교사 자녀</li>
                 </ul>
                 <a href="form.html" target="_blank">
                     <button class="apply-button">신청하기!</button>
@@ -55,26 +66,26 @@
         </div>
 
         <div id="footer-wrap">
-            <div id="footer" class="footer">
-              <div class="inner">
-                <div class="relatedLinks">
-                  <ul class="sns">
-                    <li>
-                      <a href="https://www.instagram.com/ymkofficial/"
-                         onmousedown="_trk_clickTrace('EVT', '메인^footer^SNS^인스타그램');"
-                         rel="noopener noreferrer"
-                         target="_blank">
-                        <img alt="instagram 새창으로 열림" src="foot-icon02.png">
-                      </a>
-                    </li>
-                    <li>연락처: 1234-5678</li>
-                    <li>Email: ymk@mail.com</li>
-                  </ul>
-                </div>
+          <div id="footer" class="footer">
+            <div class="inner">
+              <div class="relatedLinks">
+                <ul class="sns">
+                  <li>
+                    <a href="https://www.instagram.com/ymkofficial/"
+                       onmousedown="_trk_clickTrace('EVT', '메인^footer^SNS^인스타그램');"
+                       rel="noopener noreferrer"
+                       target="_blank">
+                      <img alt="instagram 새창으로 열림" src="foot-icon02.png">
+                    </a>
+                  </li>
+                  <li>연락처: 010-1234-5678</li>
+                  <li>Email: ymk@gmail.com</li>
+                </ul>
               </div>
             </div>
+          </div>
         </div>
-        </div>
+        
         <script src="Home page.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
