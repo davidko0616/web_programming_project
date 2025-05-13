@@ -253,3 +253,24 @@ body {
   color: #0061ff;
   text-decoration: underline;
 }
+
+.feature-media {
+  flex: 2;
+  min-width: 300px;
+}
+
+.feature-media video,
+.feature-media iframe {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .feature-media,
+  .feature-text {
+    width: 100%;
+    text-align: center;
+  }
+}
