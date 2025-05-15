@@ -10,19 +10,19 @@
   <h2 class="mb-4">글 수정</h2>
   <form method="POST" action="{{ url_for('edit', post_id=post.id) }}">
     <div class="mb-3">
-      <label for="author" class="form-label">작성자</label>
-      <input type="text" class="form-control" id="author" name="author" value="{{ post.author }}" required>
+      <label for="name" class="form-label">작성자</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{ post.name }}" required>
     </div>
     <div class="mb-3">
       <label for="title" class="form-label">제목</label>
       <input type="text" class="form-control" id="title" name="title" value="{{ post.title }}" required>
     </div>
     <div class="mb-3">
-      <label for="body" class="form-label">내용</label>
-      <textarea class="form-control" id="body" name="body" rows="5" required>{{ post.body }}</textarea>
+      <label for="content" class="form-label">내용</label>
+      <textarea class="form-control" id="content" name="content" rows="5" required>{{ post.content }}</textarea>
     </div>
     <button type="submit" class="btn btn-primary">수정 완료</button>
-    <a href="{{ url_for('index') }}" class="btn btn-secondary">취소</a>
+    <a href="{{ url_for('qna') }}" class="btn btn-secondary">취소</a>
   </form>
 </div>
 </body>
