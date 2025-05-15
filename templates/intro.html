@@ -2,22 +2,22 @@
 <html>
     <head>
         <title>Midterm Practice</title>
-        <link href="Style.css" rel="stylesheet" />
+        <link href="../static/Style.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
     <body>
         <div class="header">
             <div class="logo">
-              <img src="YMK 로고.png" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180" height="80">
+              <img src="../static/pictures/YMK%20로고.png" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180" height="80">
             </div>
 
             <nav class="navbar">
               <ul class="menu-bar">
-                <li><a href="Home Page.html">Home</a></li>
-                <li><a href="intro.html">소개</a></li>
-                <li><a href="#">역사</a></li>
-                <li><a href="#">게시판</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('intro') }}">소개</a></li>
+            <li><a href="#">역사</a></li>
+            <li><a href="{{ url_for('qna') }}">게시판</a></li>
               </ul>
             </nav>
           </div>
@@ -178,7 +178,7 @@
                          onmousedown="_trk_clickTrace('EVT', '메인^footer^SNS^인스타그램');"
                          rel="noopener noreferrer"
                          target="_blank">
-                        <img alt="instagram 새창으로 열림" src="foot-icon02.png">
+                        <img alt="instagram 새창으로 열림" src="../static/pictures/foot-icon02.png">
                       </a>
                     </li>
                     <li>연락처: 010-1234-5678</li>
