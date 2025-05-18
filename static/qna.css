@@ -1,83 +1,95 @@
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 900px;
-      background-color: #E3F6FF;
-      margin: auto;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E3F6FF;
+  margin: 0;
+}
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+.main-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .top-bar input[type="text"] {
-      width: 70%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+.top-bar input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    .top-bar a {
-      text-decoration: none;
-      background-color: #008DDA;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 16px;
-    }
+.top-bar a {
+  text-decoration: none;
+  background-color: #008DDA;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+}
 
-    .post {
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
+.post {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-    .post .title {
-      font-weight: bold;
-      font-size: 18px;
-    }
+.meta {
+  font-size: 12px;
+  color: #555;
+}
 
-    .post .meta {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 8px;
-    }
+.comments {
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
 
-    .post .body {
-      margin-top: 8px;
-    }
+.comment {
+  font-size: 14px;
+  padding: 5px 0;
+}
 
-    .post .actions {
-      margin-top: 10px;
-    }
+.vote-buttons, .comment-vote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
 
-    .post button {
-      margin-right: 10px;
-    }
+.vote-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+}
 
-    .comments {
-      margin-top: 10px;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
+.vote-btn.upvote:hover {
+  color: green;
+}
 
-    .comment {
-      font-size: 14px;
-      padding: 5px 0;
-    }
+.vote-btn.downvote:hover {
+  color: red;
+}
 
-    .comment-input {
-      margin-top: 8px;
-      display: flex;
-      gap: 8px;
-    }
+.vote-btn.active {
+  font-weight: bold;
+}
 
-    .comment-input input {
-      flex: 1;
-      padding: 5px;
-    }
+.vote-btn.upvote.active {
+  color: green;
+}
+
+.vote-btn.downvote.active {
+  color: red;
+}
+
+/* Footer styles */
+.footer {
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.footer .sns li {
+  display: inline;
+  margin-right: 15px;
+}
