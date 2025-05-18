@@ -1,13 +1,108 @@
+/* qna_styles.css */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Malgun Gothic ", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   background-color: #E3F6FF;
-  margin: 0;
+  font-style: normal;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5px 40px;
+  background-color: #B7E0FF;
+  margin-bottom: 8px;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  height: 100px;
+  width: 150px;
+}
+
+.navbar {
+  position: absolute; /* Take it out of the normal flow */
+  left: 50%;         /* Move the left edge to the center */
+  transform: translateX(-50%); /* Shift it back by half its own width */
+}
+
+.menu-bar {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-bar a:hover {
+  color: #7C4585;
+  background-color: #F7F7F7;
+}
+
+/* Rest of your CSS */
 .main-content {
+  flex: 1;
   max-width: 900px;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+#footer-wrap {
+  background-color: #B7E0FF !important;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.footer .sns {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer .sns li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.footer .sns img {
+  width: 40px;
+  height: auto;
 }
 
 .top-bar input[type="text"] {
@@ -30,6 +125,7 @@ body {
 .post {
   border: 1px solid #ccc;
   border-radius: 8px;
+  background-color: white; /* Ensure post backgrounds remain white */
 }
 
 .meta {
@@ -41,6 +137,7 @@ body {
   margin-top: 10px;
   border-top: 1px solid #ddd;
   padding-top: 10px;
+  background-color: white; /* Ensure comment section background remains white */
 }
 
 .comment {
@@ -81,15 +178,4 @@ body {
 
 .vote-btn.downvote.active {
   color: red;
-}
-
-/* Footer styles */
-.footer {
-  width: 100%;
-  background-color: #f8f9fa;
-}
-
-.footer .sns li {
-  display: inline;
-  margin-right: 15px;
 }
