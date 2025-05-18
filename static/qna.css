@@ -1,83 +1,181 @@
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 900px;
-      background-color: #E3F6FF;
-      margin: auto;
-    }
+/* qna_styles.css */
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+body {
+  font-family: "Malgun Gothic ", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  background-color: #E3F6FF;
+  font-style: normal;
+}
 
-    .top-bar input[type="text"] {
-      width: 70%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5px 40px;
+  background-color: #B7E0FF;
+  margin-bottom: 8px;
+}
 
-    .top-bar a {
-      text-decoration: none;
-      background-color: #008DDA;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 16px;
-    }
+.logo {
+  flex: 0 0 auto;
+}
 
-    .post {
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
+.logo img {
+  height: 100px;
+  width: 150px;
+}
 
-    .post .title {
-      font-weight: bold;
-      font-size: 18px;
-    }
+.navbar {
+  position: absolute; /* Take it out of the normal flow */
+  left: 50%;         /* Move the left edge to the center */
+  transform: translateX(-50%); /* Shift it back by half its own width */
+}
 
-    .post .meta {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 8px;
-    }
+.menu-bar {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
 
-    .post .body {
-      margin-top: 8px;
-    }
+.menu-bar a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    .post .actions {
-      margin-top: 10px;
-    }
+.menu-bar a:hover {
+  color: #7C4585;
+  background-color: #F7F7F7;
+}
 
-    .post button {
-      margin-right: 10px;
-    }
+/* Rest of your CSS */
+.main-content {
+  flex: 1;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    .comments {
-      margin-top: 10px;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
+/* Footer Styles */
+#footer-wrap {
+  background-color: #B7E0FF !important;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 30px;
+}
 
-    .comment {
-      font-size: 14px;
-      padding: 5px 0;
-    }
+.footer {
+  width: 100%;
+  text-align: center;
+}
 
-    .comment-input {
-      margin-top: 8px;
-      display: flex;
-      gap: 8px;
-    }
+.footer .sns {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
-    .comment-input input {
-      flex: 1;
-      padding: 5px;
-    }
+.footer .sns li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.footer .sns img {
+  width: 40px;
+  height: auto;
+}
+
+.top-bar input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.top-bar a {
+  text-decoration: none;
+  background-color: #008DDA;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white; /* Ensure post backgrounds remain white */
+}
+
+.meta {
+  font-size: 12px;
+  color: #555;
+}
+
+.comments {
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  background-color: white; /* Ensure comment section background remains white */
+}
+
+.comment {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.vote-buttons, .comment-vote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.vote-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+.vote-btn.upvote:hover {
+  color: green;
+}
+
+.vote-btn.downvote:hover {
+  color: red;
+}
+
+.vote-btn.active {
+  font-weight: bold;
+}
+
+.vote-btn.upvote.active {
+  color: green;
+}
+
+.vote-btn.downvote.active {
+  color: red;
+}
