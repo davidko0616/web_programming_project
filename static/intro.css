@@ -1,0 +1,30 @@
+.stair-slideshow {
+  position: relative;
+  width: 800px; /* Fixed size ensures precise background math */
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slice {
+  position: absolute;
+  width: 100%;
+  height: 20%; /* 5 slices = 100% total height */
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 500%; /* Show full image stacked vertically */
+  background-position-x: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.9s ease-in-out;
+}
+
+.slice.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slice.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}

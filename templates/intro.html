@@ -3,6 +3,7 @@
     <head>
         <title>Midterm Practice</title>
         <link href="../static/Style.css" rel="stylesheet" />
+        <link href="../static/intro.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
@@ -29,25 +30,17 @@
 <section class="feature-section">
   <div class="feature-container">
     <div class="feature-text">
-      <h2>임크 소개 영상</h2>
-      <p>임크 소개 영상입니다. 사역의 비전과 여정을 짧은 영상으로 확인해보세요.</p>
+      <h2>임크 소개 슬라이드</h2>
+      <p>계단식 효과로 부드럽게 전환되는 이미지를 확인해보세요.</p>
     </div>
-    <div class="feature-media">
-      <!-- Use a video file -->
-      <video controls width="100%">
-        <source src="your-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
 
-      <!-- Or embed a PowerPoint file:
-      <iframe src="https://onedrive.live.com/embed?cid=YOUR_CID&resid=YOUR_RESID&authkey=YOUR_KEY&em=2"
-              width="100%" height="400" frameborder="0">
-        This is an embedded PowerPoint presentation.
-      </iframe>
-      -->
+    <div class="feature-media">
+      <div id="stair-slideshow" class="stair-slideshow"></div>
     </div>
   </div>
 </section>
+
+
 
 <section class="feature-section">
   <div class="feature-container">
@@ -205,6 +198,63 @@
       prevEl: '.swiper-button-prev',
     },
   });
+</script>
+
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+const images = [
+  '../static/pictures/retreat_group.jpg',
+  '../static/pictures/ymk_worship.jpg'
+];
+
+const numSlices = 5;
+const slideshow = document.getElementById('stair-slideshow');
+let current = 0;
+let slices = [];
+
+// Initialize slices
+for (let i = 0; i < numSlices; i++) {
+  const slice = document.createElement('div');
+  slice.classList.add('slice');
+  slice.style.top = `${(100 / numSlices) * i}%`;
+  slice.style.backgroundPosition = `center ${(100 / (numSlices - 1)) * i}%`;
+  slideshow.appendChild(slice);
+  slices.push(slice);
+}
+
+// Show image slices with staggered animation
+function showImage(index) {
+  slices.forEach((slice, i) => {
+    slice.classList.remove('hide');
+    slice.style.backgroundImage = `url(${images[index]})`;
+    setTimeout(() => {
+      slice.classList.add('show');
+    }, i * 300);
+  });
+}
+
+// Hide slices with stair-out animation
+function hideImage() {
+  slices.forEach((slice, i) => {
+    setTimeout(() => {
+      slice.classList.remove('show');
+      slice.classList.add('hide');
+    }, i * 300);
+  });
+}
+
+function nextImage() {
+  hideImage();
+  current = (current + 1) % images.length;
+  setTimeout(() => {
+    showImage(current);
+  }, numSlices * 150 + 500);
+}
+
+// Start the slideshow
+showImage(current);
+setInterval(nextImage, 8000);
+});
 </script>
 
     </body>
