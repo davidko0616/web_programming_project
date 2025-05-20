@@ -179,3 +179,23 @@ body {
 .vote-btn.downvote.active {
   color: red;
 }
+
+.edit-page .header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.edit-page .logo img {
+    display: block; /* Fixes image display issue */
+}
+
+.edit-page .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.edit-page .menu-bar {
+    justify-content: center;
+}
