@@ -28,3 +28,87 @@
   opacity: 0;
   transform: translateY(20px);
 }
+
+.slider-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  perspective: 1000px;
+  margin: 0 auto 40px auto;
+  max-width: 800px;
+}
+
+.slide-card {
+  width: 806px;         /* Adjust width as needed */
+  height: 378px;        /* Adjust height as needed */
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.slide-card.flipped .slide-front {
+  transform: rotateY(180deg);
+}
+
+.slide-card.flipped .slide-back {
+  transform: rotateY(0deg);
+}
+
+.slide-front,
+.slide-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slide-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.slide-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;/* Ensures the image fills the card nicely */
+  display: block;
+}
+
+.slide-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(-180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.slider-btn {
+  background-color: none;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 48px;
+  height: 48px;
+}
+
+.slider-btn:hover {
+  background-color: none;
+}
+

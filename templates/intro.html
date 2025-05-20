@@ -40,7 +40,25 @@
   </div>
 </section>
 
+<section class="feature-section">
+  <div class="feature-container">
+    <div class="slider-horizontal">
+      <button id="prev-btn" class="slider-btn">❮</button>
 
+      <div class="slide-card" id="slide-card">
+        <div class="slide-front">
+          <img src="image1.jpg" alt="임크 이미지 1" />
+        </div>
+        <div class="slide-back">
+          <h3>임크 대표 1</h3>
+          <p>이 대표는 따뜻한 리더십으로 공동체를 섬기고 있습니다.</p>
+        </div>
+      </div>
+
+      <button id="next-btn" class="slider-btn">❯</button>
+    </div>
+  </div>
+</section>
 
 <section class="feature-section">
   <div class="feature-container">
@@ -255,6 +273,59 @@ function nextImage() {
 showImage(current);
 setInterval(nextImage, 8000);
 });
+</script>
+<script>
+const slides = [
+  {
+    image: "../static/pictures/개강모임.png",
+    title: "임크 대표 1",
+    caption: "이 대표는 따뜻한 리더십으로 공동체를 섬기고 있습니다."
+  },
+  {
+    image: "../static/pictures/새내기_비정모.png",
+    title: "임크 대표 2",
+    caption: "진실한 마음으로 MK들을 돌보는 리더입니다."
+  },
+  {
+    image: "../static/pictures/선배들_졸업.png",
+    title: "임크 대표 3",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  }
+];
+
+let current = 0;
+const card = document.getElementById("slide-card");
+const front = card.querySelector(".slide-front img");
+const back = card.querySelector(".slide-back");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+function updateSlide(index) {
+  front.src = slides[index].image;
+  back.innerHTML = `<h3>${slides[index].title}</h3><p>${slides[index].caption}</p>`;
+}
+
+card.addEventListener("click", () => {
+  card.classList.toggle("flipped");
+});
+
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevents click from bubbling to the card
+  current = (current - 1 + slides.length) % slides.length;
+  card.classList.remove("flipped"); // reset flip when changing slides
+  updateSlide(current);
+});
+
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  current = (current + 1) % slides.length;
+  card.classList.remove("flipped");
+  updateSlide(current);
+});
+
+// Initialize first slide
+updateSlide(current);
+
 </script>
 
     </body>
