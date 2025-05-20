@@ -4,6 +4,8 @@ body {
   font-weight: 400;
   background-color: #E3F6FF;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 .header {
   display: flex;
