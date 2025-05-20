@@ -17,7 +17,7 @@
               <ul class="menu-bar">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('intro') }}">소개</a></li>
-            <li><a href="#">역사</a></li>
+            <li><a href="{{ url_for('team') }}">임원</a></li>
             <li><a href="{{ url_for('qna') }}">게시판</a></li>
               </ul>
             </nav>
@@ -60,125 +60,6 @@
   </div>
 </section>
 
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>임크 대표</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>송도 대표</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>회계</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>서기</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>공지</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>인스타</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>송도임원</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>임형언니</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>임형언니</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>아카이브</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
           <div id="footer-wrap">
             <div id="footer" class="footer">
               <div class="inner">
@@ -277,18 +158,58 @@ setInterval(nextImage, 8000);
 <script>
 const slides = [
   {
-    image: "../static/pictures/개강모임.png",
+    image: "../static/pictures/1선배_졸업.png",
     title: "임크 대표 1",
     caption: "이 대표는 따뜻한 리더십으로 공동체를 섬기고 있습니다."
   },
   {
-    image: "../static/pictures/새내기_비정모.png",
+    image: "../static/pictures/2수강신청.png",
     title: "임크 대표 2",
     caption: "진실한 마음으로 MK들을 돌보는 리더입니다."
   },
   {
-    image: "../static/pictures/선배들_졸업.png",
+    image: "../static/pictures/3새내기_비정모.png",
     title: "임크 대표 3",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/4개강모임.png",
+    title: "임크 대표 4",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/5정기모임.png",
+    title: "임크 대표 5",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/6임크닉.png",
+    title: "임크 대표 6",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/7간식행사.png",
+    title: "임크 대표 7",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/8아카라카.png",
+    title: "임크 대표 8",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/9종강모임.png",
+    title: "임크 대표 9",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/10리트릿.png",
+    title: "임크 대표 10",
+    caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
+  },
+  {
+    image: "../static/pictures/11임형언니.png",
+    title: "임크 대표 11",
     caption: "열정과 기도로 공동체를 이끄는 모습이 인상적입니다."
   }
 ];
