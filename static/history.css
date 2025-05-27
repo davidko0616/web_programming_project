@@ -1,102 +1,123 @@
-body {
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      padding: 20px;
-      margin: 0;
-    }
+/* Add this to your existing CSS */
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px; /* Adds space between heading and timeline */
+  width: 100%;
+}
 
-    h1 {
-      text-align: center;
-      color: #003366;
-    }
+/* Timeline container adjustment */
+.timeline-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 60px; /* Removed top margin since h1 has bottom margin */
+  height: 100px;
+}
 
-    .timeline {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 60px 0 30px;
-      padding: 40px 0 20px;
-    }
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #003366;
+  z-index: 1;
+}
 
-    /* Horizontal line */
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: #003366;
-      z-index: 0;
-    }
+.timeline-track {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
 
-    .timeline-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: none;
-      border: none;
-      margin: 0 20px;
-      cursor: pointer;
-      z-index: 1;
-    }
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
 
-    .circle {
-      width: 20px;
-      height: 20px;
-      border: 3px solid #003366;
-      border-radius: 50%;
-      background-color: white;
-      margin-bottom: 6px;
-      transition: background 0.3s, transform 0.2s;
-    }
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid #003366;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+}
 
-    .timeline-item.active .circle {
-      background-color: #003366;
-    }
+.timeline-item.active .circle {
+  background-color: #003366;
+}
 
-    .timeline-item:hover .circle {
-      transform: scale(1.1);
-    }
+.label {
+  position: absolute;
+  top: calc(50% + 20px); /* Position below the circle */
+  font-size: 14px;
+  color: #003366;
+  white-space: nowrap;
+}
 
-    .label {
-      font-size: 14px;
-      color: #003366;
-      user-select: none;
-    }
+/* Content Sections */
+.content-section {
+  display: none;
+  background-color: white;
+  border-left: 4px solid #003366;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto 0;
+  border-radius: 0 8px 8px 8px;
+  animation: fadeIn 0.3s ease-in;
+}
 
-    .content-section {
-      display: none;
-      background-color: white;
-      border-left: 4px solid #003366;
-      padding: 20px;
-      border-radius: 0 6px 6px 6px;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeIn 0.3s ease-in;
-    }
+.content-section.active {
+  display: block;
+}
 
-    .content-section.active {
-      display: block;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .timeline-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    height: auto;
+    padding-left: 30px;
+  }
 
-    @media (max-width: 600px) {
-      .timeline-item {
-        margin: 0 12px;
-      }
+  .timeline-line {
+    display: none;
+  }
 
-      .label {
-        font-size: 12px;
-      }
+  .circle {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-      .content-section {
-        font-size: 14px;
-        padding: 15px;
-      }
-    }
+  .label {
+    position: relative;
+    top: auto;
+    left: 15px;
+    margin-top: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+}
