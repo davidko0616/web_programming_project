@@ -17,7 +17,7 @@
     <ul class="menu-bar">
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('intro') }}">소개</a></li>
-      <li><a href="#">역사</a></li>
+      <li><a href="{{ url_for('team') }}">역사</a></li>
       <li><a href="{{ url_for('qna') }}">게시판</a></li>
     </ul>
   </div>
@@ -30,7 +30,6 @@
       <form class="d-flex" method="GET" action="{{ url_for('qna') }}">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         <input type="text" name="query" placeholder="검색..." class="form-control me-2" value="{{ query }}">
-        <button type="submit" class="btn btn-outline-secondary">검색</button>
         <a href="{{ url_for('create_post') }}" class="btn btn-primary">+작성</a>
       </form>
     </div>
@@ -71,13 +70,12 @@
           {% for comment in post.comments %}
           <div class="comment mb-2 d-flex align-items-center">
             <div class="comment-vote me-2 d-flex flex-column align-items-center">
-              <form method="POST" action="{{ url_for('vote_comment', comment_id=comment.id, vote_type=1) }}">
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"
+              <form method="POST" action="{{ url_for('vote_comment', comment_id=comment.id, vote_type=1) }}" class="vote-form">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <button type="submit" class="vote-btn upvote btn btn-xs {% if comment.votes|selectattr('session_id', 'equalto', session.get('session_id'))|selectattr('vote_type', 'equalto', 1)|list %}btn-success{% else %}btn-outline-secondary{% endif %}">▲</button>
               </form>
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <div class="vote-count small">{{ comment.vote_count }}</div>
-              <form method="POST" action="{{ url_for('vote_comment', comment_id=comment.id, vote_type=-1) }}">
+              <div class="vote-count small">{{ comment.vote_count }}</div>
+              <form method="POST" action="{{ url_for('vote_comment', comment_id=comment.id, vote_type=-1) }}" class="vote-form">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <button type="submit" class="vote-btn downvote btn btn-xs {% if comment.votes|selectattr('session_id', 'equalto', session.get('session_id'))|selectattr('vote_type', 'equalto', -1)|list %}btn-danger{% else %}btn-outline-secondary{% endif %}">▼</button>
               </form>
