@@ -84,6 +84,10 @@ def intro():
 def form():
     return render_template('form.html')
 
+@app.route('/team')
+def team():
+    return render_template('team.html')
+
 
 # 🔹 Q&A List
 @app.route('/qna')
