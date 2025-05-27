@@ -23,7 +23,8 @@
       </div>
 <div class="container py-4">
   <h2 class="mb-4">새 글 작성</h2>
-  <form method="POST" action="{{ url_for('qna_write') }}">
+  <form method="POST" action="{{ url_for('create_post') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="mb-3">
       <label for="name" class="form-label">작성자</label>
       <input type="text" class="form-control" id="name" name="name" required>
@@ -36,6 +37,7 @@
       <label for="content" class="form-label">내용</label>
       <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
     </div>
+    <input type="password" name="password" placeholder="비밀번호" required><br>
     <button type="submit" class="btn btn-primary">등록</button>
     <a href="{{ url_for('qna') }}" class="btn btn-secondary">취소</a>
   </form>
