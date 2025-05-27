@@ -1,0 +1,123 @@
+/* Add this to your existing CSS */
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px; /* Adds space between heading and timeline */
+  width: 100%;
+}
+
+/* Timeline container adjustment */
+.timeline-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 60px; /* Removed top margin since h1 has bottom margin */
+  height: 100px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #003366;
+  z-index: 1;
+}
+
+.timeline-track {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid #003366;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+}
+
+.timeline-item.active .circle {
+  background-color: #003366;
+}
+
+.label {
+  position: absolute;
+  top: calc(50% + 20px); /* Position below the circle */
+  font-size: 14px;
+  color: #003366;
+  white-space: nowrap;
+}
+
+/* Content Sections */
+.content-section {
+  display: none;
+  background-color: white;
+  border-left: 4px solid #003366;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto 0;
+  border-radius: 0 8px 8px 8px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.content-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .timeline-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    height: auto;
+    padding-left: 30px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .circle {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .label {
+    position: relative;
+    top: auto;
+    left: 15px;
+    margin-top: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+}
