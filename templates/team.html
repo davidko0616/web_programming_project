@@ -3,7 +3,7 @@
 <head>
         <title>Midterm Practice</title>
         <link href="../static/Style.css" rel="stylesheet" />
-        <link href="../static/intro.css" rel="stylesheet" />
+        <link href="../static/team.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
@@ -26,10 +26,61 @@
             <ul class="top_information">
             </ul>
     </div>
+
+<h1>YMK History</h1>
+
+<div class="timeline">
+  <div class="timeline-item active" data-target="event2016">
+    <div class="circle"></div>
+    <div class="label">2016</div>
+  </div>
+  <div class="timeline-item" data-target="event1915">
+    <div class="circle"></div>
+    <div class="label">1915</div>
+  </div>
+  <div class="timeline-item" data-target="event1957">
+    <div class="circle"></div>
+    <div class="label">1957</div>
+  </div>
+  <div class="timeline-item" data-target="event1990">
+    <div class="circle"></div>
+    <div class="label">1990</div>
+  </div>
+  <div class="timeline-item" data-target="event2000">
+    <div class="circle"></div>
+    <div class="label">2000</div>
+  </div>
+</div>
+
+<div id="event2016" class="content-section active">
+  <h3>2016: YMK Established</h3>
+  <p>Korea’s first modern hospital, Gwanghyewon, was established as a royal medical institution.</p>
+</div>
+
+<div id="event1915" class="content-section">
+  <h3>1915: Chosun Christian College Founded</h3>
+  <p>The predecessor of Yonsei University was founded under the name Chosun Christian College.</p>
+</div>
+
+<div id="event1957" class="content-section">
+  <h3>1957: Yonsei University is Born</h3>
+  <p>Yonhi College and Severance Medical School merged to form Yonsei University.</p>
+</div>
+
+<div id="event1990" class="content-section">
+  <h3>1990:</h3>
+  <p>...</p>
+</div>
+
+<div id="event2000" class="content-section">
+  <h3>2000:</h3>
+  <p>...</p>
+</div>
+
 <section class="feature-section">
   <div class="feature-container">
     <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
+      <img src="../static/pictures/주한 수정 사진.png" alt="Image Here" />
     </div>
     <div class="feature-text">
       <h2>임크 대표</h2>
@@ -45,7 +96,7 @@
       <p></p>
     </div>
     <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
+      <img src="../static/pictures/진하 수정 사진.png" alt="Image Here" />
     </div>
   </div>
 </section>
@@ -69,7 +120,7 @@
       <p></p>
     </div>
     <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
+      <img src="../static/pictures/요한 수정 사진.png" alt="Image Here" />
     </div>
   </div>
 </section>
@@ -89,11 +140,11 @@
 <section class="feature-section">
   <div class="feature-container reverse-layout">
     <div class="feature-text">
-      <h2>인스타</h2>
+      <h2>미디어 & 인스타</h2>
       <p></p>
     </div>
     <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
+      <img src="../static/pictures/김예진 수정 사진.png" alt="Image Here" />
     </div>
   </div>
 </section>
@@ -141,9 +192,25 @@
       <p></p>
     </div>
     <div class="feature-image">
-      <img src="your-image.png" alt="Image Here" />
+      <img src="../static/pictures/예준 수정 사진.png" alt="Image Here" />
     </div>
   </div>
 </section>
+
+<script>
+  const items = document.querySelectorAll('.timeline-item');
+  const sections = document.querySelectorAll('.content-section');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+
+      sections.forEach(section => section.classList.remove('active'));
+      const target = document.getElementById(item.dataset.target);
+      if (target) target.classList.add('active');
+    });
+  });
+</script>
     </body>
 </html>
