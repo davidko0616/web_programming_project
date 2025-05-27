@@ -79,6 +79,11 @@ def intro():
     return render_template('intro.html')
 
 
+@app.route('/history')
+def history():
+    return render_template('history.html')
+
+
 # 🔹 Form
 @app.route('/form')
 def form():
