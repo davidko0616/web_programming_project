@@ -73,7 +73,7 @@ h1 {
   border-left: 4px solid #003366;
   padding: 20px;
   max-width: 600px;
-  margin: 40px auto 0;
+  margin: 60px auto;
   border-radius: 0 8px 8px 8px;
   animation: fadeIn 0.3s ease-in;
 }
@@ -125,7 +125,7 @@ h1 {
 body {
       font-family: Arial, sans-serif;
       background: #e6f2ff;
-      padding: 40px;
+      padding: 0px;
     }
     .timeline {
       position: relative;
@@ -135,6 +135,7 @@ body {
       flex-wrap: wrap;
       max-width: 1200px;
       margin: 0 auto;
+      margin-bottom: 50px;
     }
     .timeline::before {
       content: '';
@@ -202,6 +203,7 @@ body {
   gap: 20px;
   perspective: 1000px;
   margin: 0 auto 40px auto;
+  background-color: transparent;
 }
 
 .slide-card {
@@ -275,4 +277,12 @@ body {
 
 .slider-btn:hover {
   background-color: none;
+}
+
+.feature-section {
+  background-color: transparent;
+}
+
+.footer {
+  padding-top: 80px; important!
 }
