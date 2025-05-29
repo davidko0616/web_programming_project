@@ -79,3 +79,4 @@
 
     searchInput.addEventListener("input", loadPosts);
     window.addEventListener("load", loadPosts);
+

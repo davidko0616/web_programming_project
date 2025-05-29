@@ -10,8 +10,6 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
   padding: 5px 40px;
   background-color: #B7E0FF;
   margin-bottom: 8px;
@@ -27,9 +25,9 @@ body {
 }
 
 .navbar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute; /* Take it out of the normal flow */
+  left: 50%;         /* Move the left edge to the center */
+  transform: translateX(-50%); /* Shift it back by half its own width */
 }
 
 .menu-bar {

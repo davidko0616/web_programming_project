@@ -2,30 +2,29 @@
 <html>
     <head>
         <title>YMK Website</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/Style.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Gowun+Batang&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
-      <div class="header">
-        <div class="logo">
-          <img src="../static/pictures/YMK%20로고.png" alt="Clickable Image" id="logoimg" style="cursor: pointer;" width="180" height="80">
-        </div>
-
-        <nav class="navbar">
-          <ul class="menu-bar">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('intro') }}">소개</a></li>
-            <li><a href="{{ url_for('team') }}">임원</a></li>
-            <li><a href="{{ url_for('qna') }}">게시판</a></li>
-          </ul>
-        </nav>
-      </div>
+        <header class="header">
+          <div class="logo">
+            <img src="../static/pictures/YMK%20로고.png" alt="YMK Logo" id="logoimg">
+          </div>
+          <nav class="navbar">
+            <ul class="menu-bar">
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('intro') }}">소개</a></li>
+              <li><a href="{{ url_for('team') }}">임원</a></li>
+              <li><a href="{{ url_for('qna') }}">게시판</a></li>
+            </ul>
+          </nav>
+        </header>
 
 
       <div class="swiper-container-wrap">
