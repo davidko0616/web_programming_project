@@ -138,7 +138,7 @@ body {
 .into-mid {
     display: flex;
     align-items: center;
-    background-color: #E1F0DA;
+    background-color: #FFD63A;
     color: black;
     padding: 40px;
     border-radius: 12px;
@@ -176,7 +176,7 @@ body {
 .apply-button {
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #008DDA;
+    background-color: #5B913B;
     border: none;
     border-radius: 8px;
     color: white;
