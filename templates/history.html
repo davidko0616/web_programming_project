@@ -83,123 +83,25 @@
 
 <section class="feature-section">
   <div class="feature-container">
-    <div class="feature-image">
-      <img src="../static/pictures/주한 수정 사진.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>임크 대표</h2>
-      <p></p>
+    <div class="slider-horizontal">
+      <button id="prev-btn" class="slider-btn">❮</button>
+
+      <div class="slide-card" id="slide-card">
+        <div class="slide-front">
+          <img src="image1.jpg" alt="임크 이미지 1" />
+        </div>
+        <div class="slide-back">
+          <h3>임크 대표 1</h3>
+          <p>이 대표는 따뜻한 리더십으로 공동체를 섬기고 있습니다.</p>
+        </div>
+      </div>
+
+      <button id="next-btn" class="slider-btn">❯</button>
     </div>
   </div>
 </section>
 
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>송도 대표</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="../static/pictures/진하 수정 사진.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="../static/pictures/연제 수정 사진.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>회계</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>서기</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="../static/pictures/요한 수정 사진.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="../static/pictures/아론 수정 사진.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>공지</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>미디어 & 인스타</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="../static/pictures/김예진 수정 사진.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="../static/pictures/찬혁 수정 사진.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>송도임원</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>임형언니</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="../static/pictures/시온 수정 사진.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="../static/pictures/영광 수정 사진.png" alt="Image Here" />
-    </div>
-    <div class="feature-text">
-      <h2>임형언니</h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-container reverse-layout">
-    <div class="feature-text">
-      <h2>아카이브</h2>
-      <p></p>
-    </div>
-    <div class="feature-image">
-      <img src="../static/pictures/예준 수정 사진.png" alt="Image Here" />
-    </div>
-  </div>
-</section>
+<h2 class="timeline-bottom-title">YMK 설립자 & 역대 대표</h2>
 
 <div class="timeline">
     <div class="entry">
@@ -228,8 +130,6 @@
       <div class="info">(18 국제통상)</div>
     </div>
   </div>
-
-  <h2 class="timeline-bottom-title">YMK 설립자 & 역대 대표</h2>
 
   <div class="timeline timeline-bottom">
     <div class="entry">
@@ -264,6 +164,26 @@
     </div>
   </div>
 
+<div id="footer-wrap">
+            <div id="footer" class="footer">
+              <div class="inner">
+                <div class="relatedLinks">
+                  <ul class="sns">
+                    <li>
+                      <a href="https://www.instagram.com/ymkofficial/"
+                         onmousedown="_trk_clickTrace('EVT', '메인^footer^SNS^인스타그램');"
+                         rel="noopener noreferrer"
+                         target="_blank">
+                        <img alt="instagram 새창으로 열림" src="../static/pictures/foot-icon02.png">
+                      </a>
+                    </li>
+                    <li>연락처: 010-1234-5678</li>
+                    <li>Email: ymk@gmail.com</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 <script>
   const items = document.querySelectorAll('.timeline-item');
   const sections = document.querySelectorAll('.content-section');
@@ -278,6 +198,94 @@
       if (target) target.classList.add('active');
     });
   });
+</script>
+<script>
+const slides = [
+  {
+    image: "../static/pictures/주한 수정 사진.png",
+    title: "임크 대표",
+    caption: "황주한<br>21.5 전기전자공학부<br>싱가포르, 말레이시아 MK"
+  },
+  {
+    image: "../static/pictures/진하 수정 사진.png",
+    title: "송도 대표",
+    caption: "양진하<br>24.5 정치외교학과<br>필리핀, 몽골 MK"
+  },
+  {
+    image: "../static/pictures/예준 수정 사진.png",
+    title: "미디어 & 아카이빙",
+    caption: "정예준<br>20.5 글로벌인재대학 응용정보공학<br>라오스 MK"
+  },
+  {
+    image: "../static/pictures/시온 수정 사진.png",
+    title: "임형언니",
+    caption: "이시온<br>23 기계공학과<br>중국, 키르기스스탄 MK"
+  },
+  {
+    image: "../static/pictures/찬혁 수정 사진.png",
+    title: "송도 임원",
+    caption: "명찬혁<br>24.5 글로벌인재학부<br>중국, 태국 MK"
+  },
+  {
+    image: "../static/pictures/연제 수정 사진.png",
+    title: "회계",
+    caption: "장연제<br>22.5 UIC HASS QRM<br>필리핀 MK"
+  },
+  {
+    image: "../static/pictures/요한 수정 사진.png",
+    title: "서기",
+    caption: "황요한<br>23.5 경영학과<br>필리핀 MK"
+  },
+  {
+    image: "../static/pictures/영광 수정 사진.png",
+    title: "임형언니",
+    caption: "최영광<br>21 언론홍보영상학부<br>중국, 태국 MK"
+  },
+  {
+    image: "../static/pictures/아론 수정 사진.png",
+    title: "공지",
+    caption: "조아론<br>23 글로벌인재학부 국제통상<br>모로코 MK"
+  },
+  {
+    image: "../static/pictures/예진 수정 사진.png",
+    title: "미디어 & 인스타그램",
+    caption: "김예진<br>23 글로벌인재학부 국제통상<br>몽골 MK"
+  }
+];
+
+let current = 0;
+const card = document.getElementById("slide-card");
+const front = card.querySelector(".slide-front img");
+const back = card.querySelector(".slide-back");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+function updateSlide(index) {
+  front.src = slides[index].image;
+  back.innerHTML = `<h3>${slides[index].title}</h3><p>${slides[index].caption}</p>`;
+}
+
+card.addEventListener("click", () => {
+  card.classList.toggle("flipped");
+});
+
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevents click from bubbling to the card
+  current = (current - 1 + slides.length) % slides.length;
+  card.classList.remove("flipped"); // reset flip when changing slides
+  updateSlide(current);
+});
+
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  current = (current + 1) % slides.length;
+  card.classList.remove("flipped");
+  updateSlide(current);
+});
+
+// Initialize first slide
+updateSlide(current);
+
 </script>
     </body>
 </html>
