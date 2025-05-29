@@ -121,3 +121,76 @@ h1 {
     padding-left: 20px;
   }
 }
+
+body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      padding: 40px;
+    }
+    .timeline {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: black;
+      z-index: 0;
+    }
+    .entry {
+      text-align: center;
+      position: relative;
+      flex: 1;
+      min-width: 100px;
+      z-index: 1;
+    }
+    .entry .label {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      position: relative;
+      top: 30px; /* Lowered to match the horizontal line */
+      z-index: 2;
+    }
+
+    .entry .founder {
+      background: #cbe2f9;
+      color: black;
+      border-radius: 20px;
+      padding: 4px 12px;
+      display: inline-block;
+      font-weight: bold;
+      position: relative;
+      top: 26px;
+      z-index: 2;
+    }
+
+    .entry .name {
+      font-weight: bold;
+      margin-top: 50px;
+    }
+    .entry .info {
+      font-size: 0.9em;
+      color: #444;
+    }
+
+   .timeline-bottom-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 60px 0 40px;
+      color: #003366;
+    }
+
