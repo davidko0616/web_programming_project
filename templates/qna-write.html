@@ -37,7 +37,9 @@
       <label for="content" class="form-label">내용</label>
       <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
     </div>
-    <input type="password" name="password" placeholder="비밀번호" required><br>
+    <div class="write-password">
+          <input type="password" name="password" placeholder="비밀번호" required>
+    </div>
     <button type="submit" class="btn btn-primary">등록</button>
     <a href="{{ url_for('qna') }}" class="btn btn-secondary">취소</a>
   </form>
