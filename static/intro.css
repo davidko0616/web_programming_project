@@ -83,7 +83,7 @@
 }
 
 .slide-back {
-  background-color: #fff;
+  background-color: #578FCA;
   color: #333;
   transform: rotateY(-180deg);
   display: flex;
@@ -92,12 +92,16 @@
   align-items: center;
   padding: 1rem;
   text-align: center;
+  font-size: 20px;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 600;
+
 }
 
 
 .slider-btn {
   background-color: transparent;
-  color: white;
+  color: black;
   border: none;
   padding: 10px 15px;
   font-size: 24px;
@@ -119,18 +123,34 @@
 .feature-text p {
   max-width: 360px; /* limits the width of the caption */
   line-height: 1.6;
-  font-size: 1rem;
-  color: #444;
+  font-size: 17px;
+  color: black;
   margin: 0.5rem 0 0 0;
   text-align: left;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 600;
+
+}
+.feature-text hw{
+  color: black;
 }
 
 .feature-media {
-  background-color: #0d47a1; /* darker blue */
+  background-color: #3674B5; /* darker blue */
   padding: 1rem;
   border-radius: 12px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center; /* center the slideshow if needed */
+  justify-content: center;
 }
+
+.slider-title {
+  position: relative;
+  left: 670px;
+  font-weight: 600;
+  font-size:22px;
+  margin: 0;
+  padding: 0;
+}
+
