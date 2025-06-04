@@ -124,9 +124,9 @@ h1 {
 }
 
 body {
-      font-family: Arial, sans-serif;
-      background: #e6f2ff;
-      padding: 40px;
+  font-family: "Malgun Gothic ", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;      background: #e6f2ff;
+      padding: 0px;
     }
     .timeline {
       position: relative;
