@@ -83,7 +83,7 @@
 }
 
 .slide-back {
-  background-color: #578FCA;
+  background-color: white;
   color: #333;
   transform: rotateY(-180deg);
   display: flex;
