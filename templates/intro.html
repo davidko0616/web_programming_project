@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Midterm Practice</title>
-        <link href="../static/Style.css" rel="stylesheet" />
         <link href="../static/intro.css" rel="stylesheet" />
         <link href="https://fonts.google.com/share?selection.family=Noto+Serif+KR:wght@200..900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -41,11 +40,12 @@
   </div>
 </section>
 
+
+<section class="feature-section">
+  <div class="feature-container">
       <div class="slider-title">
       <h2>YMK의 주요 활동</h2>
     </div>
-<section class="feature-section">
-  <div class="feature-container">
     <div class="slider-horizontal">
       <button id="prev-btn" class="slider-btn">❮</button>
 
@@ -115,7 +115,6 @@ const slideshow = document.getElementById('stair-slideshow');
 let current = 0;
 let slices = [];
 
-// Initialize slices
 for (let i = 0; i < numSlices; i++) {
   const slice = document.createElement('div');
   slice.classList.add('slice');
@@ -125,7 +124,6 @@ for (let i = 0; i < numSlices; i++) {
   slices.push(slice);
 }
 
-// Show image slices with staggered animation
 function showImage(index) {
   slices.forEach((slice, i) => {
     slice.classList.remove('hide');
@@ -136,7 +134,6 @@ function showImage(index) {
   });
 }
 
-// Hide slices with stair-out animation
 function hideImage() {
   slices.forEach((slice, i) => {
     setTimeout(() => {
@@ -248,7 +245,6 @@ nextBtn.addEventListener("click", (e) => {
   updateSlide(current);
 });
 
-// Initialize first slide
 updateSlide(current);
 
 </script>

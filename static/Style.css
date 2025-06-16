@@ -85,7 +85,6 @@ body {
   border-radius: 10px;
 }
 
-/* Position buttons at the edges of the image, not the page */
 .swiper-button-next,
 .swiper-button-prev {
   color: white; /* or any color you prefer */
@@ -95,7 +94,6 @@ body {
   height: 44px;
 }
 
-/* Optional: improve visibility of buttons on small screens */
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -138,7 +136,7 @@ body {
 .into-mid {
     display: flex;
     align-items: center;
-    background-color: #F4F8D3;
+    background-color: #F7CFD8;
     color: black;
     padding: 40px;
     border-radius: 12px;
@@ -176,7 +174,7 @@ body {
 .apply-button {
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #3D5300;
+    background-color: #86A788;
     border: none;
     border-radius: 8px;
     color: white;

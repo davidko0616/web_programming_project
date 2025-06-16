@@ -4,7 +4,7 @@ body {
   font-family: "Malgun Gothic ", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  background-color: #e6f2ff;
+  background-color: #e6f2ff !important;
   font-style: normal;
 }
 
@@ -219,4 +219,9 @@ body {
 
 .write-password{
 margin:20px 0 20px;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 8px;
 }
